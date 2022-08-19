@@ -1,5 +1,5 @@
 # Warbird Hook
-On Windows 10 21H2, PatchGuard does not verify the integrity of pointers of `nt!g_kernelCallbacks`, unlike `nt!SeCiCallbacks`. The callback table containers pointers to an image named `ClipSp.sys`, which is a signed driver protected by Microsoft Warbird used for licensing checks (called from `nt!SPCall2ServerInternal`).  
+On Windows 10 21H2, PatchGuard does not verify the integrity of pointers of `nt!g_kernelCallbacks`, unlike `nt!SeCiCallbacks`. The callback table contains pointers to an image named `ClipSp.sys`, which is a signed driver protected by Microsoft Warbird used for licensing checks (called from `nt!SPCall2ServerInternal`).  
 
 The interesting thing about it is that PatchGuard does not verify the integrity of several image sections, including `PAGEwx`, which the driver contains in order to decrypt and re-encrypt its own code during runtime.  
 
