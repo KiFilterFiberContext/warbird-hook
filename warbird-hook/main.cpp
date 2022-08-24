@@ -2,6 +2,8 @@
 #include <ntstrsafe.h>
 #include "utils.hpp"
 
+extern "C" NTSTATUS DriverEntry(PDRIVER_OBJECT DrivObj, PUNICODE_STRING Reg);
+
 static volatile ULONG64 ClipSpIsAppLicensed_o;
 
 static volatile ULONG64 WarbirdSegmentDecrypt3;
