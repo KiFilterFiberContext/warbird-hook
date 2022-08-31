@@ -34,4 +34,4 @@ struct ENCRYPTED_BLOCK_DATA_READ_WRITE_$(RI)
 #pragma warbird(end_shuffle)
 };
 ```
-One can recalculate the checksum and modify the global structure to circumvent this.
+One can recalculate the checksum and modify the global structure or patch the check to circumvent this.
